@@ -1,3 +1,5 @@
+A simple online forum
+
 Individual project of COMP3322
 
 Written in HTML, CSS, Javascript, PHP
