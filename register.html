@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Banana Forum</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #registermenu{
+        background-color: skyblue;
+        display: block;
+        float: center;
+        border-radius: 5px;
+        margin-top: 15px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px rgba(34, 35, 58, 0.2);
+      }
+
+      #registerBttn{
+        background-color: skyblue;
+        border-radius: 3px;
+        border-width: 2px;
+        padding: 3px;
+      }
+
+      #redirect{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topbar">
+      <h2 id="logo" style="cursor: pointer;" onClick="location.href='./index.php'">Banana Forum</h2><br>
+      <a id="home" class="topbarBttn" href="./index.php">Home</a>
+      <input type="text" id="searchbox" placeholder="Search here ^_^">
+      <a id="login" class="topbarBttn" href="./login.html">Log in</a>
+      <a id="register" class="topbarBttn" href="./register.html">Register</a>
+    </div>
+
+    <div id="registermenu" style="text-align:center;">
+      <h3>Create an account</h3>
+      <form id="RegForm" action="register.php" method="post">
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" maxlength="50" required>
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" maxlength="50" required>
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" maxlength="50"  type="hidden" required>
+        </p>
+        <p>
+          <label for="confirmation">Confirmation:</label>
+          <input type="password" id="confirmation" name="confirmation" maxlength="50" type="hidden" required>
+        </p>
+        <input type="submit" id="registerBttn" value="Register">
+      </form>
+    </div>
+    <div id="redirect">
+      <h4 style="text-align:center;">Already have an account?</h4>
+      <button><a href="./login.html" style="text-decoration: none;">Log in Here</a></button>
+    </div>
+  </body>
+</html>

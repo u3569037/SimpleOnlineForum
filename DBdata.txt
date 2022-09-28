@@ -1,0 +1,43 @@
+CREATE TABLE memberRecord(
+  uid VARCHAR(50) NOT NULL,
+  memberName VARCHAR(50) NOT NULL,
+  memberEmail VARCHAR(50) NOT NULL,
+  memberPassword VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Question(
+  qid VARCHAR(50) NOT NULL,
+  space VARCHAR(50) NOT NULL,
+  title VARCHAR(100) NOT NULL,
+  content VARCHAR(1000) NOT NULL,
+  answer VARCHAR(50) NOT NULL,
+  up VARCHAR(50) NOT NULL,
+  time VARCHAR(50) NOT NULL,
+  creatorid VARCHAR(50) NOT NULL,
+  creatorName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Answer(
+  aid VARCHAR(50) NOT NULL,
+  qid VARCHAR(50) NOT NULL,
+  content VARCHAR(1000) NOT NULL,
+  uid VARCHAR(50) NOT NULL,
+  uname VARCHAR(50) NOT NULL,
+  time VARCHAR(50) NOT NULL
+);
+
+INSERT INTO `memberRecord` (`uid`, `memberName`, `memberEmail`, `memberPassword`) VALUES ('uid1', 'Andy', 'andy@test.hk', '123'), ('uid2', 'Bob', 'bob@test.hk', '123');
+
+INSERT INTO `memberRecord` (`uid`, `memberName`, `memberEmail`, `memberPassword`) VALUES ('uid3', 'Cindy', 'cindy@test.hk', '123');
+
+INSERT INTO `Question` (`qid`, `space`, `title`, `content`, `answer`, `up`, `time`, `creatorid`, `creatorName`) VALUES ('qid1', 'Javascript', 'What is the difference between Java and\r\nJavascript', 'I am a newbie in programming, and I would like\r\nto know what is the difference between Java and\r\nJavascript', '[\"aid1\", \"aid2\"]', '[\"uid2\", \"uid3\"]', '10-10-2020', 'uid1', 'Andy');
+
+INSERT INTO `Question` (`qid`, `space`, `title`, `content`, `answer`, `up`, `time`, `creatorid`, `creatorName`) VALUES ('qid2', 'Machine Learning', 'How to learn Machine Learning', 'This is a test problem in the space Machine\r\nLearning', '[\"aid3\"]', '[\"uid1\", \"uid3\"]', '11-10-2020', 'uid2', 'Bob');
+
+INSERT INTO `Question` (`qid`, `space`, `title`, `content`, `answer`, `up`, `time`, `creatorid`, `creatorName`) VALUES ('qid3', 'Algorithm', 'How to learn Algorithm', 'I am wondering where I can find the resource to\r\nlearn the algorithms', '[]', '[\"uid1\", \"uid2\"]', '13-10-2020', 'uid3', 'Cindy');
+
+INSERT INTO `Answer` (`aid`, `qid`, `content`, `uid`, `uname`, `time`) VALUES ('aid1', 'qid1', '1. JavaScript is used for Front End development while\r\njava is used for Back End Development; 2. Java Script is\r\ndynamically typed language and Java is Statically typed\r\nlanguage; 3. Java Script is a scripting language while Java\r\nis a programming language; 4. Java and JavaScript are very\r\ndifferent in their SYNTAX; 5. Both languages are Object\r\nOriented but JavaScript is a Partial Object Oriented\r\nLanguage while Java is a fully Object Oriented Langauge.', 'uid2', 'Bob', '13-10-2020');
+
+INSERT INTO `Answer` (`aid`, `qid`, `content`, `uid`, `uname`, `time`) VALUES ('aid2', 'qid1', 'They share some letters and they are both computer\r\nlanguages, just about everything else is different.', 'uid3', 'Cindy', '13-10-2020');
+
+INSERT INTO `Answer` (`aid`, `qid`, `content`, `uid`, `uname`, `time`) VALUES ('aid3', 'qid2', 'Stage 1: Get your math in place. Stage 2: Programming.\r\nStage 3: Learn Machine Learning tools: You will have to\r\nlearn certain common topics to build from. They are:\r\nRegression techniques. SVM. Classification Techniques.\r\nClustering Techniques. Neural Nets. Decision making\r\nalgorithms. Optimization Techniques. Stage 4: Build After\r\nyou have learnt the tools. It is time you build something.\"', 'uid1', 'Andy', '15-10-2020');

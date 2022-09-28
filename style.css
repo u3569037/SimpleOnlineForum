@@ -1,0 +1,125 @@
+body{
+  font-family: sans-serif;
+}
+
+body{
+  background-color: rgba(211, 211, 211, 0.26);
+}
+
+#topbar{
+  background-color: rgba(211, 211, 211, 0.767);
+  padding:5px;
+  box-shadow: 3px 3px 3px rgba(34, 35, 58, 0.2);
+}
+
+#logo{
+  color:blue; 
+  font-size: 30px;
+  font-family: 'Lucida Handwriting'; 
+  padding-left: 5px; 
+  padding-right: 30px; 
+  display: inline-block;
+}
+
+.topbarBttn{
+  display: inline-block;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  border-color: inherit;
+  border-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.topbarBttn:hover{
+  background-color: rgba(211, 211, 211, 0.603);
+}
+
+#hot{
+  background-color: rgba(255, 0, 0, 0.452);
+  border-radius: 3px;
+}
+
+#searchbox:focus{
+  border-width: 2px;
+  border-color: blue;
+}
+
+.questionBlk,#head{
+  display: block;
+  float: right;
+  background-color: white;
+  margin: 15px;
+  margin-right: 5%;
+  margin-bottom:10px;
+  padding: 15px;
+  width: 70%;
+  height: auto;
+  box-shadow: 5px 5px 5px rgba(34, 35, 58, 0.2);
+}
+
+.answerBlk{
+  display: none;
+  float: right;
+  background-color: white;
+  margin: 15px;
+  margin-right: 5%;
+  margin-bottom:10px;
+  padding: 15px;
+  width: 65%;
+  height: auto;
+  box-shadow: 5px 5px 5px rgba(34, 35, 58, 0.2);
+}
+
+.upvote, .answer{
+  border: blue solid 1px;
+  border-radius: 1px;
+}
+
+.content{
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #topbar{
+    display: block;
+    text-align: center;
+  }
+  #logo{
+    padding-right: 40px;
+    float: center;
+  }
+  .topbarBttn{
+    float: center;
+    font-size: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .questionBlk,#head{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: center;
+  }
+  .answerBlk{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+  #logo{
+    padding-right: 50%;
+  }
+  .questionBlk,#head,.answerBlk{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

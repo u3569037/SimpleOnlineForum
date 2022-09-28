@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Banana Forum</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      #askqmenu{
+        background-color: skyblue;
+        display: block;
+        float: center;
+        text-align:center;
+        border-radius: 5px;
+        margin-top: 15px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px rgba(34, 35, 58, 0.2);
+      }
+
+      #submitBttn{
+        background-color: skyblue;
+        border-radius: 3px;
+        border-width: 2px;
+        padding: 3px;
+      }
+      #redirect{
+        text-align: center;
+        margin-top: 10px;
+      }
+      #redirectBttn{
+        background-color: white;
+        border: solid blue 3px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topbar">
+      <h2 id="logo" style="cursor: pointer;" onClick="location.href='./memberhome.php'">Banana Forum</h2><br>
+      <a id="home" class="topbarBttn" href="./memberhome.php">Home</a>
+      <button id="hot" class="topbarBttn">Hot</button>
+      <input type="text" id="searchbox" placeholder="Search here ^_^">
+      <button id="logout" class="topbarBttn" onClick="location.href='logout.php'">Logout</button>
+    </div>
+
+    <div id="askqmenu" style="text-align:center;">
+      <h3>Ask your question</h3>
+      <form id="AskQForm" action="askq.php" method="post">
+        <p>
+          <label for="title" style="font-weight:bold;">Title:</label><br>
+          <textarea id="title" name="title" rows="1" cols="40" required></textarea>
+        </p>
+        <p>
+          <label for="space" style="font-weight:bold;">Space:</label><br>
+          <input type="radio" name="space" value="Algorithm" required>Algorithm
+          <input type="radio" name="space" value="Machine Learning" required>Machine Learning
+          <input type="radio" name="space" value="System" required>System
+          <input type="radio" name="space" value="Javascript" required>Javascript
+        </p>
+        <p>
+          <label for="content" style="font-weight:bold;">Content:</label><br>
+          <textarea id="content" name="content" rows="4" cols="40" required></textarea>
+        </p>
+        <input type="submit" id="submitBttn" value="Submit">
+      </form>
+    </div>
+    <div id="redirect">
+      <button id="redirectBttn"><a href="./memberhome.php" style="text-decoration: none; padding:5px;">Back to Home Page</a></button>
+    </div>
+  </body>
+</html>
